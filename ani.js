@@ -5,12 +5,12 @@ const defaultSettings = {
     delayPerChar_ms: 100,
     fill: "forwards",
     iterations: 1,
-}
+};
 
 const animations = {
     fade: getFadeAnimation = (property, reversed) => [
         { opacity: 0 },
-        { opacity: 1 }
+        { opacity: 1 },
     ],
 
     fadeFrom: getFadeFromAnimation = (property, reversed) => {
@@ -40,8 +40,8 @@ const animations = {
     colors: getColorAnimation = (property, reversed) => {
         property = property ?? ["red", "green", "blue"];
         return property.map(property => {
-            return { color: `${property}` };
-        })
+            return { color: `${property}`, };
+        });
     }
 };
 
@@ -54,17 +54,13 @@ function playTextAnimation(
     delayPerChar_ms = defaultSettings.delayPerChar_ms, 
     fill = defaultSettings.fill, 
     iterations = defaultSettings.iterations, 
-    property = null 
+    property = null
     } ) {
-    let error = false;
 
     if(animation == null) {
         showError("Animation must be selected. Please refer to the documentation on https://github.com/repo");
-        error = true;
+        return;
     }
-
-    // We don't return earlier because this way we can catch both errors.
-    if(error) return;
 
     setAnimation(elementID, animation, time_ms, reversed, delayPerChar_ms, fill, iterations, property);
 }
@@ -109,7 +105,7 @@ function setAnimation(elementID, animation, time_ms, reversed, delayPerChar_ms, 
               delay: index * delayPerChar_ms
             }
           );
-    })
+    });
 }
 
 function turnTextToSpans(string) {
