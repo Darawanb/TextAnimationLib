@@ -1,0 +1,25 @@
+{
+  "name": "text-animation-lib",
+  "version": "1.0.0",
+  "description": "Javascript animations for your library",
+  "main": "ani.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darawanb/TextAnimationLib.git"
+  },
+  "keywords": [
+    "Text",
+    "Character",
+    "Animation",
+    "Javascript"
+  ],
+  "author": "Darawan Fatah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darawanb/TextAnimationLib/issues"
+  },
+  "homepage": "https://github.com/Darawanb/TextAnimationLib#readme"
+}
