@@ -110,8 +110,7 @@ function setAnimation(elementID, animation, time_ms, reversed, delayPerChar_ms, 
 
 function turnTextToSpans(string) {
     return Array.from(string).map(char => {
-        if(char !== " ") return `<span style="position: relative; display: inline-block;" class="char-text-animation-library">${char}</span>`;
-        return `<span style="position: relative; display: inline-block; min-width: 7px;" class="char-text-animation-library">${char}</span>`;
+        return `<span style="position: relative; display: inline-block; min-width: 5px;" class="char-text-animation-library">${char}</span>`;
     });
 }
 
